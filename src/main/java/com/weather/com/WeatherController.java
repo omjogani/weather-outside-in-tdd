@@ -1,7 +1,10 @@
 package com.weather.com;
 
 import io.micronaut.http.annotation.*;
+import io.micronaut.scheduling.annotation.ExecuteOn;
+import io.micronaut.scheduling.TaskExecutors;
 
+@ExecuteOn(TaskExecutors.IO)
 @Controller("/weather")
 public class WeatherController {
 
